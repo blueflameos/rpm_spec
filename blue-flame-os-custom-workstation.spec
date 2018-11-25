@@ -1,13 +1,17 @@
 Name:           blue-flame-os-custom-workstation
 Version:        29
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Blue Flame OS Custom Gnome Shell Files
 BuildArch:      noarch
 License:        GPLv3
 URL:            https://github.com/blueflameos/blue-flame-os-custom-workstation
 Source0:        https://github.com/blueflameos/blue-flame-os-custom-workstation/archive/master.zip
-Requires(post): pkgconfig(glib-2.0)
-
+Requires(post): pkgconfig(glib-2.0)       
+Requires:       breeze-cursor-theme
+Requires:       McOS-MJV-3.30-theme
+Requires:       MacOSX-Gnome-Light-theme 
+Requires:       firewatch-2016-game-wallpaper
+Requires:       la-capitaine-icon-theme 
 
 %description
 Blue Flame OS Custom Gnome Shell Files.
@@ -32,6 +36,9 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas/ &>/dev/null || :
 
 
 %changelog
+* Sun Nov 25 2018 yucefsourani <youssef.m.sourani@gmail.com> - 29-3
+- Release 3
+
 * Sun Nov 25 2018 yucefsourani <youssef.m.sourani@gmail.com> - 29-2
 - Release 2
 
