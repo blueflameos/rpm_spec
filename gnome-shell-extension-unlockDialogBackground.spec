@@ -2,7 +2,7 @@
 %global fname gnome-shell-extension-unlockDialogBackground-master
 Name:           gnome-shell-extension-unlockDialogBackground
 Version:        1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Change unlock dialog background
 BuildArch:      noarch
 License:        MIT
@@ -17,6 +17,7 @@ You can change background picture from extension settings.
 
 %prep
 %setup -q -n %{fname}
+sed -i -- 's/\/path\/to\/picture/file:\/\/\/usr\/share\/wallpapers\/blueflameos\/firewatch_2016_game_wallpaper.jpg/g' %{uuid}/schemas/org.gnome.shell.extensions.unlockDialogBackground.gschema.xml
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -38,5 +39,8 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas/ &>/dev/null || :
 %{_datadir}/gnome-shell/extensions/%{uuid}/*
 
 %changelog
-* Fri Nov 23 2018 yucefsourani <youssef.m.sourani@gmail.com> - 1.0-1
+* Sun Nov 25 2018 yucefsourani <youssef.m.sourani@gmail.com> - 2.0-2
+- Release 2
+
+* Fri Nov 23 2018 yucefsourani <youssef.m.sourani@gmail.com> - 2.0-1
 - Initial
