@@ -1,6 +1,6 @@
 Name:           blue-flame-os-custom-workstation
 Version:        29
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Blue Flame OS Custom Gnome Shell Files
 BuildArch:      noarch
 License:        GPLv3
@@ -32,5 +32,8 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas/ &>/dev/null || :
 
 
 %changelog
+* Sun Nov 25 2018 yucefsourani <youssef.m.sourani@gmail.com> - 29-2
+- Release 2
+
 * Fri Nov 23 2018 yucefsourani <youssef.m.sourani@gmail.com> - 29-1
 - Initial
